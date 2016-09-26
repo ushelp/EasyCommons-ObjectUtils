@@ -24,7 +24,7 @@ Alias definitions (only for EasyObjectExtract): FieldExpression#Alias
 ## 2. API
 EasyObjectUtils It includes the following components:
  
-1. **EasyObjectExtract**:Extraction of the object. Using field expression from the object (`FieldExpression`) to extract the specified property deposited **key-value** Map collection.
+1. **EasyObjectExtract**:Extraction of the object. Using field expression from the object (`FieldExpression`) to extract the specified property deposited **key-value** Map collection.<br/>
  **Scene**: JSON output, specify the output attributes and values extracted from the object.
  ```JAVA
   /**
@@ -43,14 +43,14 @@ EasyObjectUtils It includes the following components:
  List<Map> extract(collection [, fieldExpressionAndOutNameMap], fieldExpressions)
  List<Map> extract(array [, fieldExpressionAndOutNameMap], fieldExpressions)
  ```
- ** Example:**
+ **Example:**
  ```JAVA
  List<Map> list = EasyObjectExtract.extract(getData(), 
  				"userId", "name", "status", "{sysRoles}.name#roleNames",
  				"{sysRoles}.roleId#roleIds");
  ```
 
-2. **EasyObjectFilter**:Object filtering. The JavaBean object properties of special characters (<,>, ...) to filter out, into the escape character; or custom character transformation maps.
+2. **EasyObjectFilter**:Object filtering. The JavaBean object properties of special characters (<,>, ...) to filter out, into the escape character; or custom character transformation maps.<br/>
  **Scene** : the special character JavaBean object properties contains a string to filter into character entity; or a character string property objects included replacing all the specified character. For example, the data in the file upload Struts2 package submitted to the object, a special string to the user object may contain submitted escaped.
  ```JAVA
   /**
@@ -75,7 +75,7 @@ EasyObjectUtils It includes the following components:
  EasyObjectExtract.filter(news,replaceMap);
  ```
  
-3. **EasyObjectSetNull**:Object Properties empty. Using field expressions (`FieldExpression`) specified property set to null object.
+3. **EasyObjectSetNull**:Object Properties empty. Using field expressions (`FieldExpression`) specified property set to null object.<br/>
    **Scene** : Hibernate object loaded some delay attribute set can not be loaded is empty, to prevent abnormal when no session serialized property.
  ```JAVA
   /**

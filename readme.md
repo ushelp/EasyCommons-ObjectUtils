@@ -22,13 +22,16 @@ EasyObjectUtils is EasyCommons project group obejct operations component.
 - **EasyObjectUtils 核心**
 
  1. **EasyObjectExtract**：对象抽取。 从对象中使用字段表达式(`FieldExpression`)抽取指定属性以 **key-value** 存入Map集合。 
+ 
  **适合场景**：JSON输出时，从对象中抽取指定输出属性和值。 
  
  2. **EasyObjectFilter**：JavaBean对象属性过滤。将对象中的特殊字符(<,>,...)全部过滤掉，转为转义符；或者自定义字符转换映射。 
+ 
  **适合场景**：将JavaBean对象属性中的字符串包含的特殊字符进行过滤转换为字符实体；或将对象字符串属性中包含的字符全部替换为指定字符。例如，在Struts2中文件上传时提交的数据封装到对象后，对对象中可能包含的用户提交的的特殊字符串的进行转义。
  
  3. **EasyObjectSetNull**：对象属性置空。使用字段表达式(`FieldExpression`)将对象中指定属性设置为null。 
-  **适合场景**：将Hibernate加载的对象中有些延迟无法加载的属性设置为空 ，防止在序列化属性时出现no session异常。
+
+ **适合场景**：将Hibernate加载的对象中有些延迟无法加载的属性设置为空 ，防止在序列化属性时出现no session异常。
 
 - **EasyObject FieldExpression（字段表达式）语言**
  可以在进行对象操作时进行属性定位。
@@ -56,28 +59,28 @@ EasyObjectUtils is EasyCommons project group obejct operations component.
 
 - **EasyObjectUtils core:**
 
- 1. **EasyObjectExtract**: extraction of the object. Using field expression from the object (`FieldExpression`) to extract the specified property deposited **key-value** Map collection.
- **Scene**: JSON output, specify the output attributes and values extracted from the object.
+ 1. **EasyObjectExtract**: extraction of the object. Using field expression from the object (`FieldExpression`) to extract the specified property deposited **key-value** Map collection.<br/>
+  **Scene**: JSON output, specify the output attributes and values extracted from the object.
  
- 2. **EasyObjectFilter**: JavaBean Object property filtering. The object of special characters (<,>, ...) to filter out, into the escape character; or custom character transformation maps.
+ 2. **EasyObjectFilter**: JavaBean Object property filtering. The object of special characters (<,>, ...) to filter out, into the escape character; or custom character transformation maps.<br/>
  **Scene** : the special character JavaBean Object property contains a string to filter into character entity; or a character string property objects included replacing all the specified character. For example, the data in the file upload Struts2 package submitted to the object, a special string to the user object may contain submitted escaped.
  
- 3. **EasyObjectSetNull**: Object Properties empty. Using field expressions  Language(`FieldExpression`) specified property set to null object.
-   **Scene**: Hibernate object loaded some delay attribute set can not be loaded is empty, to prevent abnormal when no session serialized property.
+ 3. **EasyObjectSetNull**: Object Properties empty. Using field expressions  Language(`FieldExpression`) specified property set to null object.<br/>
+ **Scene**: Hibernate object loaded some delay attribute set can not be loaded is empty, to prevent abnormal when no session serialized property.
 
 - **EasyObject FieldExpression language**
  EasyObjectUtils the tools used to **EasyObject FieldExpression (field expression) language** for property positioning when you operate object.
  
  Syntax:
- ```
- Specified attributes: property
- Specify the attribute that: property.property
- Each object in the specified collection: {collection}
- Each object in the specified array: [array] Attribute specifies for each object in the collection: {collection} .property
- Attribute specifies for each object in the array: [array] .property
- 
- Alias definitions (only for EasyObjectExtract): FieldExpression#Alias
- ```
+  ```
+  Specified attributes: property
+  Specify the attribute that: property.property
+  Each object in the specified collection: {collection}
+  Each object in the specified array: [array] Attribute specifies for each object in the collection: {collection} .property
+  Attribute specifies for each object in the array: [array] .property
+  
+  Alias definitions (only for EasyObjectExtract): FieldExpression#Alias
+  ```
 
 [EasyObjectUtils API - English](doc/API-en.md "EasyObjectUtils API")
 
