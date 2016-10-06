@@ -118,4 +118,8 @@ Email:<inthinkcolor@gmail.com>
 
 
 
-[http://www.easyproject.cn](http://www.easyproject.cn "EasyProject Home")
+We believe that the contribution of each bit by bit, will be driven to produce more and better free and open source products a big step.
+
+**Thank you donation to support the server running and encourage more community members.**
+
+[![PayPal](http://www.easyproject.cn/images/paypaldonation5.jpg)](https://www.paypal.me/easyproject/10 "Make payments with PayPal - it's fast, free and secure!")
